@@ -1,5 +1,5 @@
 import json
-from dataclasses import dataclass, field, make_dataclass, asdict
+from dataclasses import dataclass, field, asdict
 from urllib.parse import quote_plus
 
 

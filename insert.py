@@ -13,9 +13,6 @@ for c in category_files:
     category: Category = Category.from_dict(category_dict)
     importer.import_category(category)
 
-
-
-
 article_files = glob.glob("wikiapi/articles/*.json")
 for a in article_files:
     article_dict = api.load_from_file(a)
