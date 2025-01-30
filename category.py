@@ -1,11 +1,24 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, make_dataclass, field
 
-from .page import Page
+from page import Page
 
 
 @dataclass(unsafe_hash=True)
 class Category(Page):
-    size: int
-    pages: int
-    files: int
-    subcats: int
+    categoryinfo: dict = field(default_factory=lambda: {})
+
+    @property
+    def size(self) -> int:
+        return self.categoryinfo["size"]
+
+    @property
+    def pages(self) -> int:
+        return self.categoryinfo["pages"]
+
+    @property
+    def files(self) -> int:
+        return self.categoryinfo["files"]
+
+    @property
+    def subcats(self) -> int:
+        return self.categoryinfo["subcats"]
