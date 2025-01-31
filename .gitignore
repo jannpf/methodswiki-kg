@@ -164,8 +164,8 @@ cython_debug/
 # VSCode
 .vscode/
 
-db/data
-wikiapi/articles
+db/data/*
+wikiapi/articles/*.json
+wikiapi/categories/*.json
 wikiapi/all_articles.json
 wikiapi/all_categories.json
-wikiapi/categories
