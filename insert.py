@@ -21,3 +21,4 @@ for a in article_files:
 
 
 # importer.clear_entity("Article")
+# importer.clear_entity("Category")
