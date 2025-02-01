@@ -13,6 +13,7 @@ class NeoImporter:
 
     def import_article(self, article):
         with self.driver.session() as session:
+            print(f"Importing {article}")
             session.execute_write(self.create_article_node, article)
 
     def import_category(self, article):

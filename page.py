@@ -24,7 +24,6 @@ class Page:
 
     @classmethod
     def from_dict(cls, data: dict):
-        print(data.keys())
         return cls(**data)
 
     @staticmethod
@@ -44,3 +43,6 @@ class Page:
     @property
     def url(self) -> str:
         return f"https://sustainabilitymethods.org/index.php/{quote_plus(self.title)}"
+
+    def __repr__(self) -> str:
+        return f"Page {{title: '{self.title}', pageid: {self.pageid}, ns: {self.ns}}}"
