@@ -2,8 +2,8 @@ import glob
 
 from wikiapi import api
 from neoimporter import NeoImporter
-from category import Category
-from page import Page
+from entities.category import Category
+from entities.page import Page
 
 importer = NeoImporter("neo4j://localhost:7687", "neo4j", "12341234")
 

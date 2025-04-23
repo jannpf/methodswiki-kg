@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from page import Page
+from .page import Page
 
 
 @dataclass(unsafe_hash=True)
@@ -22,3 +22,6 @@ class Category(Page):
     @property
     def subcats(self) -> int:
         return self.categoryinfo["subcats"]
+
+    def __repr__(self) -> str:
+        return f"Category {{title: '{self.title}', pageid: {self.pageid}, ns: {self.ns}}}"

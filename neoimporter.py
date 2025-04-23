@@ -1,6 +1,6 @@
 from neo4j import GraphDatabase
-from page import Page
-from category import Category
+from entities.page import Page
+from entities.category import Category
 
 
 class NeoImporter:
@@ -18,6 +18,7 @@ class NeoImporter:
 
     def import_category(self, article):
         with self.driver.session() as session:
+            print(f"Importing {article}")
             session.execute_write(self.create_category_node, article)
 
     def clear_entity(self, label):
